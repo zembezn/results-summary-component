@@ -1,9 +1,14 @@
+import WhiteContainer from "./Components/Containers/WhiteContainer/WhiteContainer";
+import GlobalStyles from "./Components/Globalstyle"
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-    
-    </div>
+    <>
+      <GlobalStyles />
+      <WhiteContainer />
+
+    </>
   );
 }
 
