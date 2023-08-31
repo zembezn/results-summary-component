@@ -5,39 +5,39 @@ width: 280px;
 height: 400px;
 max-width: 100%;
 padding: 20px 20px;
-margin: 10px 5px;
-background-color: hsl(241, 81%, 54%);
+background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 border-radius: 25px;
 text-align: center;
 justify-content: center;
 `
 
 export const CircleContainer = styled.div`
-margin: 30px auto;
-border-radius: 50%;
-width: 160px;
-height: 160px;
-background-color: hsla(256, 72%, 46%, 1);
+border-radius: 100%;
+width: 180px;
+height: 180px;
+background-color:hsla(256, 72%, 46%, 1);
+background-color: hsla(241, 72%, 46%, 0.4);
 color: hsl(220, 15%, 55%);
 text-align: center;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin: 15px auto;
 `
 
-export const Span = styled.h1`
+export const Span = styled.h2`
 color: hsl(0, 0%, 100%);
+margin-top: 30px;
 align-items: center;
 justify-content: center;
-margin: auto;
-font-size: 3em;
-font-weight: lighter;
+font-size: 3.8em;
+font-weight: 400;
 `
-export const Title = styled.h1`
-color: hsl(220, 15%, 55%);
+export const Title = styled.h2`
+color: hsl(241, 100%, 89%);
 align-items: center;
 justify-content: center;
-margin: auto;
-font-size: 1.5em;
+margin: 10px auto;
+font-size: 1.2em;
 font-weight: lighter;
 `

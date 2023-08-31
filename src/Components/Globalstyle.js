@@ -21,27 +21,36 @@ body {
 img {
     width: 100%;
     border-radius: 12px;
+    width: 20px;
+    height: 20px;
+    padding-left: 10px;
 }
 
 text {
     padding: 22px 10px;
 }
 
-h2 {
-    font-size: 20px;
-    padding-top: 22px;
-    color: hsl(218, 44%, 22%);
-    padding-bottom: 18px;
+h1 {
+    font-size: 35px;
+    margin: 10px auto;
+    color: hsl(0, 0%, 100%);
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+h3 {
+    color: hsl(0, 100%, 67%);
+    align-items: center;
+    justify-content: right;
+    font-size: 1em;
+    font-weight: lighter;
 }
 
 p {
-    color: hsl(220, 15%, 55%);
-    padding-bottom: 30px;
+    color: hsl(241, 100%, 89%);
     align-items: center;
-    justify-content: right;
-}
+    }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
