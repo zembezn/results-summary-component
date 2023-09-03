@@ -1,19 +1,16 @@
 import styled from "styled-components"
 
 export const Result = styled.div`
-width: 300px;
-height: 50px;
-max-width: 100%;
+height: 10%;
+max-width: 80%;
 display: flex;
 flex-direction: row;
-justify-content: left;
 align-items: center;
-margin: 10px auto;
-background-color: hsla(0, 100%, 67%, 0.2);
+background-color: ${({ backgroundcolor }) => backgroundcolor};
+color: ${({ color }) => color };
 border-radius: 8px;
 `
-export const Score = styled.p`
+export const Score = styled.div`
 color: hsl(220, 15%, 55%);
-align-items: center;
-padding-left: 120px;
+display: flex;
 `

@@ -1,15 +1,16 @@
 
-import { Result, Score } from "./Styled/Result.styled"
+import { Result } from "./Styled/Result.styled"
 
-const Summary = ( ) => {
+const Summary = ({ text, backgroundcolor, color, src, alt }) => {
   return (
         
-        <Result>
-          <img src="./images/icon-reaction.svg" alt="reaction" />
-          <h3>Reaction</h3>
-          <Score>80/100</Score>
+        <Result backgroundcolor={backgroundcolor} color={color} >
+        <img src={src} alt={alt}  />
+          <p>{text}</p>
+          {/* <div>80/100</div> */}
         </Result>
         )
 }
+
 
 export default Summary

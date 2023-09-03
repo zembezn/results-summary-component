@@ -11,7 +11,7 @@ const Results = () => {
             of 100
           </CircleContainer>  
         
-        <h1>Great</h1>
+        <p>Great</p>
         <p>You scored higher than 65% of the people who have taken these tests.</p>
       </ContainerRes>
   )
