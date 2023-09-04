@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const ContainerRes = styled.div`
-width: 300px;
-height: 500px;
+width: 350px;
+height: 480px;
 max-width: 100%;
 display: flex;
 flex-direction: column;
@@ -13,29 +13,38 @@ text-align: center;
 
 export const CircleContainer = styled.div`
 border-radius: 100%;
-width: 160px;
-height: 160px;
+width: 200px;
+height: 200px;
 background-color:hsla(256, 72%, 46%, 1);
 background-color: hsla(241, 72%, 46%, 0.4);
 color: hsl(220, 15%, 55%);
-text-align: center;
 display: flex;
 flex-direction: column;
-align-items: center;
+justify-content: center;
 margin: 15px auto;
 `
 
-export const Span = styled.p`
+export const Span = styled.span`
 color: hsl(0, 0%, 100%);
-margin-top: 30px;
-align-items: center;
-justify-content: center;
+font-size: 400%;
 `
+
 export const Title = styled.p`
 color: hsl(241, 100%, 89%);
 display: flex;
 align-items: center;
 justify-content: center;
-padding-top: 30px;
-padding-bottom: 10px;
+margin-top: 30px;
+margin-bottom: 10px;
+font-size: 130%;
+`
+export const SubT = styled.p`
+color: hsl(0, 0%, 100%);
+font-size: 180%;
+margin: 5px auto;
+`
+
+export const Fback = styled.p`
+color: hsl(241, 100%, 89%);
+margin: 10px 50px;
 `

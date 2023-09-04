@@ -1,5 +1,5 @@
 
-import { ContainerRes, Title, CircleContainer, Span } from "./Styled/ResultsContainer.styled"
+import { ContainerRes, Title, CircleContainer, Span, SubT, Fback } from "./Styled/ResultsContainer.styled"
 
 const Results = () => {
   return (
@@ -8,11 +8,11 @@ const Results = () => {
         
           <CircleContainer>
             <Span>76</Span> 
-            of 100
+              of 100
           </CircleContainer>  
         
-        <p>Great</p>
-        <p>You scored higher than 65% of the people who have taken these tests.</p>
+        <SubT>Great</SubT>
+        <Fback>You scored higher than 65% of the people who have taken these tests.</Fback>
       </ContainerRes>
   )
 }
