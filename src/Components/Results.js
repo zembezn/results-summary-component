@@ -1,4 +1,4 @@
-
+import React from "react"
 import { ContainerRes, Title, CircleContainer, Span, SubT, Fback } from "./Styled/ResultsContainer.styled"
 
 const Results = () => {

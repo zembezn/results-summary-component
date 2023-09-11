@@ -7,8 +7,8 @@ max-width: 100%;
 display: flex;
 flex-direction: column;
 background-color: hsl(0, 0, 100%);
-border-radius: 25px;
-box-shadow: 10px 10px hsla(0, 0%, 0%, 0.2);
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
 `
 export const Title = styled.h1`
 font-size: 140%;

@@ -3,11 +3,10 @@ import styled from "styled-components"
 export const ContainerRes = styled.div`
 width: 350px;
 height: 480px;
-max-width: 100%;
 display: flex;
 flex-direction: column;
 background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-border-radius: 25px;
+border-radius: 30px;
 text-align: center;
 `
 
@@ -15,8 +14,7 @@ export const CircleContainer = styled.div`
 border-radius: 100%;
 width: 200px;
 height: 200px;
-background-color:hsla(256, 72%, 46%, 1);
-background-color: hsla(241, 72%, 46%, 0.4);
+background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0.1));
 color: hsl(220, 15%, 55%);
 display: flex;
 flex-direction: column;
@@ -27,6 +25,7 @@ margin: 15px auto;
 export const Span = styled.span`
 color: hsl(0, 0%, 100%);
 font-size: 400%;
+font-weight: bold;
 `
 
 export const Title = styled.p`

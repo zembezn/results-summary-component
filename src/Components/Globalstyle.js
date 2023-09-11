@@ -19,19 +19,10 @@ body {
 
 img {
     width: 100%;
-    border-radius: 12px;
-    width: 18px;
-    height: 18px;
     padding-left: 10px;
     padding-right: 8px;
 }
 
-text {
-    padding: 22px 10px;
-}
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 `
 
 export default GlobalStyles

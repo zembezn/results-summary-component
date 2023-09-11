@@ -1,14 +1,36 @@
+import React from "react";
 import GlobalStyles from "./Components/Globalstyle"
 import Results from "./Components/Results";
 import Summary from "./Components/Summary";
+import { useEffect, useState } from "react"
 import { ContainerSum, Title } from "./Components/Styled/SummaryContainer.styled";
 import { Button } from "./Components/Styled/Button.styled";
-import { Flex } from "./Components/Styled/Flex.styled";
+import { Flex, FlexContainer, Attribution } from "./Components/Styled/Flex.styled";
 
-const App = () => 
-(
+const App = () =>{ 
+
+  const [results, setResults] = useState([])
   
+  useEffect(() => {
+    const getResults = async () => {
+      const resultsFromServer = await fetchResults()
+      setResults(resultsFromServer)
+    }
+  
+    getResults()
+  }, [])
+
+  //Fetch Results
+  const fetchResults = async () => {
+    const res = await fetch("http://localhost:5000/results")
+    const data = await res.json()
+
+    return data
+    }
+
+return (
     <Flex>
+    <FlexContainer>
 
     <GlobalStyles />
     <Results />
@@ -16,19 +38,23 @@ const App = () =>
     <ContainerSum>
 
       <Title>Summary</Title>
-
-      <Summary text={"Reaction"} backgroundcolor="hsla(0, 100%, 67%, 0.1)" color="hsl(0, 100%, 67%)" src="./images/icon-reaction.svg" alt="reaction"/>
-      <Summary text={"Memory"} backgroundcolor="hsla(39, 100%, 56%, 0.1)" color="hsl(39, 100%, 56%)" src="./images/icon-memory.svg" alt="memory"/>
-      <Summary text={"Verbal"} backgroundcolor="hsla(166, 100%, 37%, 0.1)" color="hsl(166, 100%, 37%)" src="./images/icon-verbal.svg" alt="verbal"/>
-      <Summary text={"Visual"} backgroundcolor="hsla(234, 85%, 45%, 0.1)" color="hsl(234, 85%, 45%)" src="./images/icon-visual.svg" alt="visual"/>
+      
+      {results.map((result) => (<Summary key={results.id} result={result}/>))}
       
       <Button>Continue</Button>
 
     </ContainerSum>
+    </FlexContainer>
+
+    <Attribution>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/zembezn?tab=repositories">Kanya Zembe</a>.
+    </Attribution> 
 
     </Flex>
   
-)
+);
+}
 
 export default App;
 

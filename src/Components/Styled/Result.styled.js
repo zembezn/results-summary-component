@@ -9,14 +9,15 @@ justify-content: space-between;
 align-items: center;
 background-color: ${({ backgroundcolor }) => backgroundcolor};
 color: ${({ color }) => color };
-border-radius: 8px;
-margin: 8px 30px 8px  ;
+border-radius: 10px;
+margin: 8px 30px  ;
 `
 export const Category = styled.div`
 display: flex;
 margin: 5px;
 `
 export const Score = styled.p`
+display: flex;
 color: hsl(220, 15%, 55%);
 margin: 20px;
 `
