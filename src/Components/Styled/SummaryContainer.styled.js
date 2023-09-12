@@ -10,6 +10,10 @@ background-color: hsl(0, 0, 100%);
 border-top-right-radius: 30px;
 border-bottom-right-radius: 30px;
 `
+export const SumComponents = styled.div`
+display: flex;
+`
+
 export const Title = styled.h1`
 font-size: 140%;
 margin: 25px 30px 15px;

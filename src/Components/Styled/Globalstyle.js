@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     background-color: hsl(0, 0%, 100%);
     display: flex;
     min-height: 100vh;

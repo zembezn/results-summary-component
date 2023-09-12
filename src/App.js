@@ -1,10 +1,10 @@
 import React from "react";
-import GlobalStyles from "./Components/Globalstyle"
+import GlobalStyles from "./Components/Styled/Globalstyle"
 import Results from "./Components/Results";
 import Summary from "./Components/Summary";
 import { useEffect, useState } from "react"
 import { ContainerSum, Title } from "./Components/Styled/SummaryContainer.styled";
-import { Button } from "./Components/Styled/Button.styled";
+import Button from "./Components/Button";
 import { Flex, FlexContainer, Attribution } from "./Components/Styled/Flex.styled";
 
 const App = () =>{ 
@@ -20,7 +20,7 @@ const App = () =>{
     getResults()
   }, [])
 
-  //Fetch Results
+  //Fetch Results from Backend
   const fetchResults = async () => {
     const res = await fetch("http://localhost:5000/results")
     const data = await res.json()
@@ -28,20 +28,22 @@ const App = () =>{
     return data
     }
 
-return (
+
+  return (
     <Flex>
     <FlexContainer>
 
     <GlobalStyles />
-    <Results />
+    
+    <Results key={results.id} results={results}  />
 
     <ContainerSum>
 
       <Title>Summary</Title>
       
-      {results.map((result) => (<Summary key={results.id} result={result}/>))}
+      {results.map((result) => (<Summary key={results.id} result={result} />))}
       
-      <Button>Continue</Button>
+      <Button text="Continue" onClick={console.log("click")} />
 
     </ContainerSum>
     </FlexContainer>
@@ -53,7 +55,7 @@ return (
 
     </Flex>
   
-);
+  );
 }
 
 export default App;

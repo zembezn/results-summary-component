@@ -8,6 +8,10 @@ export const FlexContainer = styled.div`
 display: flex;
 border-radius: 30px;
 box-shadow: 10px 15px 30px 5px hsla(0, 0%, 50%, 0.3);
+
+@media (max-width: 375px) {
+    flex-direction: column;
+}
 `
 
 export const Attribution = styled.div`

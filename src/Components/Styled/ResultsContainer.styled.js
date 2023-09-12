@@ -20,6 +20,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 margin: 15px auto;
+font-weight: bold;
 `
 
 export const Span = styled.span`
@@ -39,8 +40,9 @@ font-size: 130%;
 `
 export const SubT = styled.p`
 color: hsl(0, 0%, 100%);
-font-size: 180%;
+font-size: 175%;
 margin: 5px auto;
+font-weight: bold;
 `
 
 export const Fback = styled.p`
