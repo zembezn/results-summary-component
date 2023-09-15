@@ -1,31 +1,46 @@
 import React from "react"
 import PropTypes from 'prop-types'
+import { ContainerSum, Title } from "./Styled/SummaryContainer.styled";
 import { Category, Result, Score, ResultScore } from "./Styled/Result.styled"
+import Button from "./Button";
 
-const Summary = ({ result }) => {
-
+const Summary = ( {results} ) => {
 
   return (
+    <ContainerSum>
+
+      <Title>Summary</Title>
+
+      {results.map((result) => (
+
+        <Result key={result.id} background={result.bgColor} color={result.color} >
+
+        <Category>
+          
+          <img src={result.icon} />
+          <p>{result.category}</p>
+          
+        </Category>
   
-    <Result key={result.id} bgColor={result.bgcolor} color={result.color} >
-      <Category>
-        
-        <img key={result.id} src={result.icon} />
-        <p key={result.id} >{result.category}</p>
-        
-      </Category>
+        <Score>
+          <ResultScore>{result.score}</ResultScore>/ 100 
+        </Score>
+  
+      </Result>
 
-      <Score>
-        <ResultScore key={result.id} >{result.score}</ResultScore>/ 100 
-      </Score>
+      ))}
 
-    </Result>
+    <Button text="Continue" onClick={() => {console.log("click")} } />
+
+    </ContainerSum>
   )
 }
 
 
 Summary.propTypes = {
-  result: PropTypes.any
+  results: PropTypes.any,
+  background: PropTypes.string
+  
 }
 
 

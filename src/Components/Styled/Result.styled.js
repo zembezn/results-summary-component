@@ -7,7 +7,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-background-color: ${({ bgColor }) => bgColor};
+background: ${({ background }) => background};
 color: ${({ color }) => color };
 border-radius: 10px;
 margin: 8px 30px  ;

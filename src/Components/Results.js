@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { ContainerRes, Title, CircleContainer, Span, SubT, Fback } from "./Styled/ResultsContainer.styled"
 
-const Results = ({ results }) => {
+const Results = ( {results} ) => {
 
-const scores = results.map((score) => { return score.score;})
+const scores = results.map((score) => { return score.score})
 
   function findAverage(array) {
     let average = 0;

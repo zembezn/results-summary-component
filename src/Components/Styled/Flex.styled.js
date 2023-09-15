@@ -14,7 +14,7 @@ box-shadow: 10px 15px 30px 5px hsla(0, 0%, 50%, 0.3);
 }
 `
 
-export const Attribution = styled.div`
+export const AttributionStyle = styled.div`
 display: flex;
 width: 100%;
 font-size: 62%; 
