@@ -16,7 +16,6 @@ const App = () => {
       const data = await res.json()
   
       setResults(data)
-
       }
   
     fetchResults()
@@ -24,11 +23,12 @@ const App = () => {
     
   return (
     <Flex>
-    <FlexContainer>
 
     <GlobalStyles />
+
+    <FlexContainer>
     
-    <Results results={results}  />
+    <Results results={results} />
 
     <Summary results={results} />
 
@@ -37,7 +37,6 @@ const App = () => {
     <Attribution /> 
 
     </Flex>
-  
   );
 }
 

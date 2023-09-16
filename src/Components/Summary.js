@@ -38,9 +38,7 @@ const Summary = ( {results} ) => {
 
 
 Summary.propTypes = {
-  results: PropTypes.any,
-  background: PropTypes.string
-  
+  results: PropTypes.any
 }
 
 
