@@ -13,7 +13,7 @@ const Summary = ( {results} ) => {
 
       {results.map((result) => (
 
-        <Result key={result.id} background={result.bgColor} color={result.color} >
+        <Result key={result.id} color={result.color} >
 
         <Category>
           

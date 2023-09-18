@@ -7,8 +7,8 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-background: ${({ background }) => background};
-color: ${({ color }) => color };
+background: ${({ color }) => color.at(1) };
+color: ${({ color }) => color.at(0) };
 border-radius: 10px;
 margin: 8px 30px  ;
 `
