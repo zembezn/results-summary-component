@@ -16,6 +16,7 @@ const App = () => {
       const data = await res.json()
   
       setResults(data)
+      console.log(data)
       }
   
     fetchResults()
