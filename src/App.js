@@ -12,7 +12,7 @@ const App = () => {
   
   useEffect(() => {
     const fetchResults = async () => {
-      const res = await fetch("http://localhost:5000/results")
+      const res = await fetch("https://raw.githubusercontent.com/zembezn/results-summary-component/master/db.json")
       const data = await res.json()
   
       setResults(data)
