@@ -12,7 +12,7 @@ const App = () => {
   
   useEffect(() => {
     const fetchResults = async () => {
-      const res = await fetch("https://my-json-server.typicode.com/zembezn/results-summary-component/db")
+      const res = await fetch("https://my-json-server.typicode.com/zembezn/results-summary-component/posts")
       const data = await res.json()
   
       setResults(data)
