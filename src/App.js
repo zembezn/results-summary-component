@@ -9,10 +9,11 @@ import Attribution from "./Components/Attribution";
 const App = () => { 
 
   const [results, setResults] = useState([])
+  console.log(results)
   
   useEffect(() => {
     const fetchResults = async () => {
-      const res = await fetch("https://raw.githubusercontent.com/zembezn/results-summary-component/master/db.json")
+      const res = await fetch("https://my-json-server.typicode.com/zembezn/results-summary-component/db")
       const data = await res.json()
   
       setResults(data)
