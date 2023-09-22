@@ -17,7 +17,7 @@ const Summary = ( {results} ) => {
 
         <Category>
           
-          <img src={result.icon} />
+          <img src={result.icon} alt="icon" />
           <p>{result.category}</p>
           
         </Category>
