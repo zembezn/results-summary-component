@@ -9,7 +9,6 @@ import Attribution from "./Components/Attribution";
 const App = () => { 
 
   const [results, setResults] = useState([])
-  console.log(results)
   
   useEffect(() => {
     const fetchResults = async () => {
@@ -17,7 +16,6 @@ const App = () => {
       const data = await res.json()
   
       setResults(data)
-      console.log(data)
       }
   
     fetchResults()
