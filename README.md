@@ -16,10 +16,8 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
-In this project I built the results-summary component using styled components, flexbox and react javascript. I populated the content from the provided JSON data file.
+In this project I built the results-summary component using styled components, flexbox, react. I populated the content from the provided JSON data file.
 ### The challenge
 
 Users should be able to:
@@ -30,14 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Screenshot.png)
+![Solution](./public/Screenshot.png)
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/resultssummarycomponent-using-styled-com-flexbox-react-and-fetch-api-U6Mu5kgYZA)
+- Live Site URL: [Live Site](https://zembezn-results-summary-component.netlify.app/)
 
 ## My process
-
+My process was creating the components then shaping and styling them using styled components. Once the component was complete visually, I focussed on rendering and populating the data using the provided json data. I imported useState and useEffect to set up the state which I used the fetch api: async await. I passed the data into the individual components using props then mapping the data I needed. I did a bit of research on writing a fuction to calculate the average which was easy and worked out great. 
 ### Built with
 
 - Semantic HTML5 markup
@@ -47,7 +45,7 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+First and foremost, I learned I am capable of way more than I ever imagined. I got comfortable with creating and styling components and learned to manipulate data to get desired outcomes. Creating state and effect was probably the most fun and interesting part of my journey creating this component. I am proud of the code I was able to write and put together, where I definately learned patience is a virtue by taking the time to understand how each element works. 
 
 To see how you can add code snippets, see below:
 
@@ -66,57 +64,86 @@ box-shadow: 10px 15px 30px 5px hsla(0, 0%, 50%, 0.3);
 }
 `
 
-export const Attribution = styled.div`
+export const Result = styled.div`
+max-width: 80%;
+height: 12%;
 display: flex;
-width: 100%;
-font-size: 62%; 
+flex-direction: row;
+justify-content: space-between;
 align-items: center;
-justify-content: center;
-margin-top: 30px;
-color: hsl(228, 45%, 44%); 
-`
+background: ${({ color }) => color.at(1) };
+color: ${({ color }) => color.at(0) };
+border-radius: 10px;
+margin: 8px 30px  ;
 ```
 ```js
   const [results, setResults] = useState([])
   
   useEffect(() => {
-    const getResults = async () => {
-      const resultsFromServer = await fetchResults()
-      setResults(resultsFromServer)
-    }
+    const fetchResults = async () => {
+      const res = await fetch("https://my-json-server.typicode.com/zembezn/results-summary-component/posts")
+      const data = await res.json()
   
-    getResults()
+      setResults(data)
+      }
+  
+    fetchResults()
   }, [])
 
-  //Fetch Results from Backend
-  const fetchResults = async () => {
-    const res = await fetch("http://localhost:5000/results")
-    const data = await res.json()
 
-    return data
+  const Results = ( {results} ) => {
+
+const scores = results.map((score) => { return score.score})
+
+  function findAverage(array) {
+    let average = 0;
+    for (let i = 0; i < array.length; i++){
+      let currentNum = array[i]
+      average += currentNum;
     }
+    average = average / array.length
+    average = average.toFixed(0)
+    return average;
+  }
+
+  const Average = findAverage(scores)
+
+
+   {results.map((result) => (
+
+        <Result key={result.id} color={result.color} >
+
+        <Category>
+          
+          <img src={result.icon} alt="icon" />
+          <p>{result.category}</p>
+          
+        </Category>
+  
+        <Score>
+          <ResultScore>{result.score}</ResultScore>/ 100 
+        </Score>
+  
+      </Result>
+
+      ))}
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I am interested to further develop my knowledge in the various react states and tools to add onto my tech stack. 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Styled Components](https://css-tricks.com/dry-ing-up-styled-components/) - this helped me using styled components, understanding its dynamic and straightforward implementation.
+- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - this helped me undserstand what flexbox does and how it can be implemented.
+- [Style Guide](https://airbnb.io/javascript/react/) - This is an amazing article on the structuring of styling files. 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Kanya Zembe](https://github.com/zembezn)
 - Frontend Mentor - [@jinxmonsoon](https://www.frontendmentor.io/profile/jinxmonsoon)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-Thank you to my friend James Nicholson for the sound advice and guidance. 
+Thank you to my friend @jamesnicholson for the guidance and support. 
