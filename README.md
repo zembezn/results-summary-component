@@ -27,10 +27,11 @@ Users should be able to:
 ### Screenshot
 
 ![Solution](./public/Screenshot.png)
+![Mobile Solution](./public/Mobile%20Screenshot.png)
 ### Links
 
 - Solution URL: [Solution](https://www.frontendmentor.io/solutions/resultssummarycomponent-using-styled-com-flexbox-react-and-fetch-api-U6Mu5kgYZA)
-- Live Site URL: [Live Site](https://zembezn-results-summary-component.netlify.app/)
+- Live Site URL: [Live Site](https://results-summary-component-zembezn.netlify.app/)
 
 ## My process
 My process was creating the components then shaping and styling them using styled components. Once the component was complete visually, I focussed on rendering and populating the data using the provided json data. I imported useState and useEffect to set up the state which I used the fetch api: async await. I passed the data into the individual components using props then mapping the data I needed. I did a bit of research on writing a fuction to calculate the average which was easy and worked out great. 
@@ -55,7 +56,7 @@ display: flex;
 border-radius: 30px;
 box-shadow: 10px 15px 30px 5px hsla(0, 0%, 50%, 0.3);
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     flex-direction: column;
 }
 `
