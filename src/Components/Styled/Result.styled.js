@@ -11,6 +11,10 @@ background: ${({ color }) => color.at(1) };
 color: ${({ color }) => color.at(0) };
 border-radius: 10px;
 margin: 8px 30px  ;
+
+@media (max-width: 768px) {
+    font-size: 90%;
+}
 `
 export const Category = styled.div`
 display: flex;

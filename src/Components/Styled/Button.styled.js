@@ -15,4 +15,8 @@ margin: auto;
 &:hover {
 background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
+
+@media (max-width: 768px) {
+    font-size: 90%;
+}
 `
