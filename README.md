@@ -1,6 +1,4 @@
-# Frontend Mentor - Results summary component solution
-
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+# Results summary component solution 
 
 ## Table of contents
 
@@ -46,8 +44,6 @@ My process was creating the components then shaping and styling them using style
 ### What I learned
 
 First and foremost, I learned I am capable of way more than I ever imagined. I got comfortable with creating and styling components and learned to manipulate data to get desired outcomes. Creating state and effect was probably the most fun and interesting part of my journey creating this component. I am proud of the code I was able to write and put together, where I definately learned patience is a virtue by taking the time to understand how each element works. 
-
-To see how you can add code snippets, see below:
 
 ```css
 export const Flex = styled.div`
